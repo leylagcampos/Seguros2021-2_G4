@@ -1,17 +1,15 @@
 package segurosxy.modelos;
 
-public class SeguroTarjeta {
-    private Integer numero;
+public class SeguroTarjeta extends Seguro {
 
-    private String bancoTarjeta;
-
-    private String nivelRiesgo = "NINGUNO";
 
     public SeguroTarjeta(String bancoTarjeta)    {
 
+        super();
         this.bancoTarjeta = bancoTarjeta;
     }
 
+    @Override
     public void cacularRiesgo()   {
 
         if (this.bancoTarjeta.equals("AZTECA")) {
@@ -22,15 +20,9 @@ public class SeguroTarjeta {
         }
     }
 
-    public String getNivelRiesgo()  {
-        return this.nivelRiesgo;
-    }
+    @Override
+    public String getDetalleSeguro() {
 
-    public Integer getNumero() {
-        return numero;
-    }
-
-    public void setNumero(Integer numero) {
-        this.numero = numero;
+        return "Seg. Tarjeta Numero: " + this.numero + " con riesgo: " + this.nivelRiesgo;
     }
 }

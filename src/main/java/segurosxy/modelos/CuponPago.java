@@ -1,11 +1,8 @@
 package segurosxy.modelos;
 
-public class FormaPagoCuponPago implements IFormaPago {
+import segurosxy.modelos.interfaces.IFormaPagoCupon;
 
-    public void realizaDescuentoAutomaticoBanco() {
-
-        throw new UnsupportedOperationException();
-    }
+public class CuponPago implements IFormaPagoCupon {
 
     public void generaCuponPago() {
 
@@ -18,4 +15,5 @@ public class FormaPagoCuponPago implements IFormaPago {
         System.out.println("Programa fecha de vencimiento cupon 1 en julio 2020");
         System.out.println("Programa fecha de vencimiento cupon 2 en agosto 2020");
     }
+
 }
