@@ -1,8 +1,12 @@
 package segurosxy;
 
 import segurosxy.modelos.Cliente;
+import segurosxy.modelos.Impresora;
 import segurosxy.modelos.SeguroTarjeta;
 import segurosxy.modelos.SeguroVehicular;
+import segurosxy.modelos.interfaces.ICobertura;
+import segurosxy.modelos.interfaces.IImprimible;
+import segurosxy.modelos.patrones.*;
 
 public class App {
 

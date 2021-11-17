@@ -1,5 +1,7 @@
 package segurosxy.modelos;
 
+import segurosxy.modelos.interfaces.ICobertura;
+
 public class SeguroVehicular extends Seguro {
 
 
@@ -25,5 +27,12 @@ public class SeguroVehicular extends Seguro {
     public String getDetalleSeguro()    {
 
         return "Seg. Vehicular Numero: " + this.numero + " con riesgo: " + this.nivelRiesgo;
+    }
+
+    public void calcularCobeturaVehicular( ICobertura cobertura )  {
+
+        cobertura.calculaCobertura();
+        
+        System.out.println();
     }
 }

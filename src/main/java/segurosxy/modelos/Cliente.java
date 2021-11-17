@@ -3,9 +3,13 @@ package segurosxy.modelos;
 import java.util.ArrayList;
 import java.util.List;
 
+import segurosxy.modelos.patrones.UbigeoContext;
+
 public class Cliente {
 
     private String nombre;
+    private UbigeoContext ubigeoCasa;
+    private UbigeoContext ubigeoTrabajo;
     private List<Seguro> seguros;
 
     public Cliente(String nombre)   {
@@ -28,5 +32,27 @@ public class Cliente {
         }
 
     }
+
+    public UbigeoContext getUbigeoCasa() {
+        return ubigeoCasa;
+    }
+
+    public void setUbigeoCasa(UbigeoContext ubigeoCasa) {
+        this.ubigeoCasa = ubigeoCasa;
+    }
+
+    public UbigeoContext getUbigeoTrabajo() {
+        return ubigeoTrabajo;
+    }
+
+    public void setUbigeoTrabajo(UbigeoContext ubigeoTrabajo) {
+        this.ubigeoTrabajo = ubigeoTrabajo;
+    }
+
+    public void printUbigeos(){
+        System.out.println("[Ubigeo] Casa: "+ ubigeoCasa.getDepartamento() +", "+ ubigeoCasa.getProvincia() +", "+ ubigeoCasa.getDistrito());
+        System.out.println("[Ubigeo] Trabajo: "+ ubigeoTrabajo.getDepartamento() +", "+ ubigeoTrabajo.getProvincia() +", "+ ubigeoTrabajo.getDistrito());
+    }
+
 
 }
