@@ -4,6 +4,7 @@ import segurosxy.modelos.interfaces.ICobertura;
 
 public class SeguroVehicular extends Seguro {
 
+    private ICobertura cobertura;
 
     public SeguroVehicular(String marca, String modelo)    {
 

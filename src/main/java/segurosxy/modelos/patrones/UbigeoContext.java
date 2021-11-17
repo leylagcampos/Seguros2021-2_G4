@@ -5,20 +5,13 @@ public class UbigeoContext {
     private String codigoDepartamento;
     private String codigoProvincia;
     private String codigoDistrito;
-    private String departamento;
-    private String provincia;
-    private String distrito;
     
     private UbigeoFlyweight flyweight;
 
     public UbigeoContext(String codigoDepartamento, String codigoProvincia, String codigoDistrito) {
 
         this.flyweight = UbigeoFactory.getInstance().getUbigeo( codigoDepartamento, codigoProvincia, codigoDistrito);
-
-        this.departamento = this.flyweight.getDepartamento();
-        this.provincia = this.flyweight.getProvincia();
-        this.distrito = this.flyweight.getDistrito();
-        
+       
         this.codigoDepartamento = codigoDepartamento;
         this.codigoProvincia = codigoProvincia;
         this.codigoDistrito = codigoDistrito;
@@ -49,26 +42,15 @@ public class UbigeoContext {
     }
 
     public String getDepartamento() {
-        return departamento;
-    }
-
-    public void setDepartamento(String departamento) {
-        this.departamento = departamento;
+        return this.flyweight.getDepartamento();
     }
 
     public String getProvincia() {
-        return provincia;
-    }
-
-    public void setProvincia(String provincia) {
-        this.provincia = provincia;
+        return this.flyweight.getProvincia();
     }
 
     public String getDistrito() {
-        return distrito;
+        return this.flyweight.getDistrito();
     }
 
-    public void setDistrito(String distrito) {
-        this.distrito = distrito;
-    }
 }
