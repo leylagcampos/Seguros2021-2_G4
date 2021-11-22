@@ -77,7 +77,8 @@ public class UbigeoFactory {
         UbigeoFlyweight flyweight = null;
 
         if ( ubigeos.get( codigoDepartamento + codigoProvincia + codigoDistrito)==null  )   {
-
+            System.out.println("MEGACACHE");
+            System.out.println(megaCache);
             List<String> datos = megaCache.get(codigoDepartamento).get(codigoProvincia).get(codigoDistrito);
             flyweight = new UbigeoFlyweight( datos.get(0), datos.get(1), datos.get(2) );
             ubigeos.put( codigoDepartamento + codigoProvincia + codigoDistrito, flyweight);

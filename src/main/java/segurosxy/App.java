@@ -22,6 +22,10 @@ public class App {
         // Agregrando cobertura al seguro
         ICobertura cobertura = new CoberturaTodoRiesgoDecorator( new CoberturaPorRoboDecorator( new CoberturaBasicaVehicular() ) );
         seguro.calcularCobeturaVehicular( cobertura );
+        
+        System.out.println("VENTA DE SEGURO");
+        VentaSeguro venta = new VentaSeguro(new InspeccionViviendaDecorator(new InspeccionSaludDecorator(new InspeccionFinanciera())));
+        venta.aprobarSeguro();
 
         cliente.setCompraSeguro(seguro);
 
