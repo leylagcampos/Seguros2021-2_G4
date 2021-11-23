@@ -19,6 +19,9 @@ public class Poliza {
         this.nombresBeneficiarios = new ArrayList<String>();
     }
 
+    public Poliza() {
+    }
+    
     public Integer getNumero() {
         return numero;
     }
@@ -62,6 +65,10 @@ public class Poliza {
         salida.append("-----------------------------------\n");
 
         return salida.toString();
+    }
+
+    public String detallepoliza(){
+        return this.numero+"\t"+this.nombresAsegurado;
     }
 
 }

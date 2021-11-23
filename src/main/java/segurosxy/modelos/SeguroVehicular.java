@@ -36,4 +36,10 @@ public class SeguroVehicular extends Seguro {
         
         System.out.println();
     }
+    
+    @Override
+    public String infoSeguroCsv() {
+        return String.join("\t",super.infoSeguroCsv()) + "\n" + 
+        String.join("\t",marca,modelo,poliza.detallepoliza(),nivelRiesgo);
+    }
 }

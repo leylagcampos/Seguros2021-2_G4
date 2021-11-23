@@ -44,6 +44,10 @@ public abstract class Seguro {
         return this.nivelRiesgo;
     }
 
+    public String infoSeguroCsv() {
+        return String.join("\t","marca","modelo","n°pol","Asegurado","nivelRiesgo");
+    }
+
     public abstract String getDetalleSeguro();
 
     public abstract void cacularRiesgo();
