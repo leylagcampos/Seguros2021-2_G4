@@ -13,7 +13,7 @@ public class InspeccionDecorator implements IInspeccion {
         
     }
     
-    @Override
+
     public void inspeccionarCliente() {
         
         this.inspeccion.inspeccionarCliente();
